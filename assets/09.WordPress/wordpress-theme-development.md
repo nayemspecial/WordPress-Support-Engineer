@@ -593,7 +593,7 @@
   - [ ] `get_theme_mod()` ব্যবহার করে Title, Description, Image ও Button আউটপুট
   - [ ] HTML এর মাধ্যমে সুন্দর Features লেআউট তৈরি
 
-## 📝 ক্লাস ২০ এর আউটলাইন এবং [ক্লাস ভিডিও এখানে](https://youtu.be/dEilyhlO9x8)
+## 📝 ক্লাস ২০ এর আউটলাইন এবং [ক্লাস ভিডিও এখানে](https://youtu.be/mbwbliKpAnY)
 
 - [ ] **Custom Post Type (CPT) পরিচিতি**
 
