@@ -572,7 +572,7 @@
   - [ ] `get_theme_mod()` ব্যবহার করে CTA Title, Description, Button ও Image আউটপুট করা
   - [ ] HTML স্ট্রাকচারের মাধ্যমে একটি আকর্ষণীয় CTA লেআউট তৈরি করা
 
-## 📝 ক্লাস ১৯ এর আউটলাইন
+## 📝 ক্লাস ১৯ এর আউটলাইন এবং [ক্লাস ভিডিও এখানে](https://youtu.be/TorXC2nv_jg)
 
 - [ ] **Features Section তৈরি**
 
@@ -593,7 +593,7 @@
   - [ ] `get_theme_mod()` ব্যবহার করে Title, Description, Image ও Button আউটপুট
   - [ ] HTML এর মাধ্যমে সুন্দর Features লেআউট তৈরি
 
-## 📝 ক্লাস ২০ এর আউটলাইন
+## 📝 ক্লাস ২০ এর আউটলাইন এবং [ক্লাস ভিডিও এখানে](https://youtu.be/dEilyhlO9x8)
 
 - [ ] **Custom Post Type (CPT) পরিচিতি**
 
