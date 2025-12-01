@@ -646,7 +646,7 @@
 - [ ] **No Course Found হ্যান্ডলিং**
   - [ ] কোর্স না থাকলে আকর্ষণীয় “No Course Found” মেসেজ দেখানো
 
-## 📝 ক্লাস ২২ এর আউটলাইন এবং [ক্লাস ভিডিও এখানে](https://youtu.be/mbwbliKpAnY)
+## 📝 ক্লাস ২২ এর আউটলাইন এবং [ক্লাস ভিডিও এখানে](https://www.youtube.com/watch?v=rpKxmevaKUU)
 
 - [ ] **Courses Archive Page তৈরি**
 
