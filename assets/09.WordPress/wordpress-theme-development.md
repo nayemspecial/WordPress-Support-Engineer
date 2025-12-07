@@ -712,7 +712,7 @@
   - [ ] `get_post_meta()` দিয়ে Original Price এবং Discount ডেটা রিট্রিভ করা
   - [ ] `single-course.php` টেমপ্লেটে Current Price, Original Price এবং Discount Badge ডাইনামিকভাবে প্রদর্শন
 
-## 📝 ক্লাস ২৫ এর আউটলাইন
+## 📝 ক্লাস ২৫ এর আউটলাইন এবং [ক্লাস ভিডিও এখানে](https://www.youtube.com/watch?v=6Dci-9CRRPU)
 
 - [ ] **সম্পূর্ণ কোর্স ডিটেইলস ফিচার পরিচিতি**
 
@@ -738,7 +738,7 @@
   - [ ] `single-course.php` টেমপ্লেটে সুন্দর লিস্ট ফরম্যাটে তথ্য দেখানো
   - [ ] আইকনসহ Video Hours, Article Count, Downloadable Resources, Language এবং Subtitles প্রদর্শন
 
-## 📝 ক্লাস ২৬ এর আউটলাইন
+## 📝 ক্লাস ২৬ এর আউটলাইন এবং [ক্লাস ভিডিও এখানে](https://youtu.be/Pz4qHmhL3Fc)
 
 - [ ] **ডাইনামিক ডেটা ম্যাপিংয়ের ধারণা**
 
