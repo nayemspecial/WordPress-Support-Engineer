@@ -738,7 +738,7 @@
   - [ ] `single-course.php` টেমপ্লেটে সুন্দর লিস্ট ফরম্যাটে তথ্য দেখানো
   - [ ] আইকনসহ Video Hours, Article Count, Downloadable Resources, Language এবং Subtitles প্রদর্শন
 
-## 📝 ক্লাস ২৬ এর আউটলাইন এবং [ক্লাস ভিডিও এখানে](https://youtu.be/Pz4qHmhL3Fc)
+## 📝 ক্লাস ২৬ এর আউটলাইন এবং [ক্লাস ভিডিও এখানে](https://www.youtube.com/watch?v=5NKQ9AYdwXk&t=101s)
 
 - [ ] **ডাইনামিক ডেটা ম্যাপিংয়ের ধারণা**
 
