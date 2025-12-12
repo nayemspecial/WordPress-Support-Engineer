@@ -861,7 +861,8 @@
   - [ ] ইউজাররা সরাসরি ফিডব্যাক দিতে পারবে
   - [ ] ওয়েবসাইট আরও প্রফেশনাল ও ইন্টারঅ্যাকটিভ দেখাবে
 
-## 🎓 **ক্লাস ২৯: Average Rating ও Total Review Count প্রদর্শন**
+## 🎓 ক্লাস ২৯: Average Rating ও Total Review Count প্রদর্শন [কাস ভু
+ইডিও](https://www.youtube.com/watch?v=O2XSd2pkST8)
 
 - [ ] **ডাটাবেস থেকে রিভিউ ডেটা রিট্রিভ করা**
 
