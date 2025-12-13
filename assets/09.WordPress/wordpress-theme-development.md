@@ -861,8 +861,7 @@
   - [ ] ইউজাররা সরাসরি ফিডব্যাক দিতে পারবে
   - [ ] ওয়েবসাইট আরও প্রফেশনাল ও ইন্টারঅ্যাকটিভ দেখাবে
 
-## 🎓 ক্লাস ২৯: Average Rating ও Total Review Count প্রদর্শন [কাস ভু
-ইডিও](https://www.youtube.com/watch?v=O2XSd2pkST8)
+## 🎓 ক্লাস ২৯: Average Rating ও Total Review Count প্রদর্শন এবং [কোর্স ভিডিও এখানে](https://www.youtube.com/watch?v=O2XSd2pkST8)
 
 - [ ] **ডাটাবেস থেকে রিভিউ ডেটা রিট্রিভ করা**
 
@@ -912,7 +911,7 @@
   - [ ] কোর্সের জনপ্রিয়তা ইউজার সহজে বুঝতে পারবে
   - [ ] পুরো থিমটি এখন আরও পেশাদার ও ব্যবহারযোগ্য হয়ে উঠবে
 
-## 🧠 ক্লাস ৩০ এর আউটলাইন
+## 🧠 ক্লাস ৩০ এর আউটলাইন  এবং [কোর্স ভিডিও এখানে](https://www.youtube.com/watch?v=qj_2GFL8uzo)
 
 ### **AJAX Explained in Bangla (Real Example)**
 
