@@ -529,6 +529,7 @@ function lessonlms_register_sidebar() {
 }
 add_action('widgets_init', 'lessonlms_register_sidebar');
 
+
 function lessonlms_register_course(){
 	register_post_type('course',
 		array(
@@ -544,13 +545,14 @@ function lessonlms_register_course(){
 				'public'      => true,
 				'has_archive' => true,
                 'rewrite'     => array('slug' => 'course'),
-                'supports'    => array('title', 'editor', 'thumbnail'),
+                'supports'    => array('title', 'editor', 'thumbnail', 'author'),
                 'menu_icon'   => 'dashicons-welcome-learn-more',
 		)
 	);
 
 }
 add_action('init','lessonlms_register_course');
+
 
 function lessonlms_course_meta_box() {
     add_meta_box(
@@ -572,6 +574,16 @@ function lessonlms_course_meta_box_callback($post){
     $downloadable_resources = get_post_meta($post->ID, 'downloadable_resources', true);
     $language = get_post_meta($post->ID, 'language', true);
     $subtitles = get_post_meta($post->ID, 'subtitles', true);
+
+    $learn_points_data = get_post_meta($post->ID, 'learn_points', true);
+    $learn_points = is_array($learn_points_data) ? implode("\n", $learn_points_data) : $learn_points_data;
+
+    $requirements_data = get_post_meta($post->ID, 'requirements', true);
+    $requirements = is_array($requirements_data) ? implode("\n", $requirements_data) : $requirements_data;
+
+    $target_audience_data = get_post_meta($post->ID, 'target_audience', true);
+    $target_audience = is_array($target_audience_data) ? implode("\n", $target_audience_data) : $target_audience_data;
+
     ?>
     <div>
         <p>
@@ -602,6 +614,30 @@ function lessonlms_course_meta_box_callback($post){
             <label for="subtitles">Subtitles:</label>
             <input type="text" name="subtitles" value="<?php echo esc_attr($subtitles); ?>">
         </p>
+
+        <p>
+            <label for="learn_points"><strong>What You'll Learn</strong></label><br>
+            <small>Input your list items</small>
+            <textarea name="learn_points" id="learn_points" rows="5" style="width:100%;">
+                <?php echo esc_textarea($learn_points); ?>
+            </textarea>
+        </p>
+
+        <p>
+            <label for="requirements"><strong>Requirements</strong></label><br>
+            <small>Input your list items</small>
+            <textarea name="requirements" id="requirements" rows="5" style="width:100%;">
+                <?php echo esc_textarea($requirements); ?>
+            </textarea>
+        </p>
+
+        <p>
+            <label for="target_audience"><strong>Who this course is for:</strong></label><br>
+            <small>Input your list items</small>
+            <textarea name="target_audience" id="target_audience" rows="5" style="width:100%;">
+                <?php echo esc_textarea($target_audience); ?>
+            </textarea>
+        </p>
     </div>
 
     <?php
@@ -617,8 +653,65 @@ function lessonlms_save_course_meta($post_id){
             update_post_meta($post_id, $field, sanitize_text_field($_POST[$field]));
         }
     }
+
+    $textarea_fields = array(
+        'learn_points', 'requirements', 'target_audience'
+    );
+    foreach ($textarea_fields as $textarea_field) {
+        if(isset($_POST[$textarea_field])){
+            update_post_meta($post_id, $textarea_field, sanitize_textarea_field($_POST[$textarea_field]));
+        }
+    }
+
 }
 add_action('save_post_course', 'lessonlms_save_course_meta');
+
+function lessonlms_register_testimonial() {
+    register_post_type('testimonial', array(
+        'labels' => array(
+            'name' => __('Testimonials', 'lessonlms'),
+            'singular_name' => __('Testimonial', 'lessonlms'),
+            'add_new' => __('Add New', 'lessonlms'),
+            'add_new_item' => __('Add New Testimonial', 'lessonlms'),
+            'edit_item' => __('Edit Testimonial', 'lessonlms'),
+        ),
+        'public' => true,
+        'menu_icon' => 'dashicons-format-quote',
+        'supports'  => array('title', 'editor', 'thumbnail'),
+        'has_archive' => true,
+        'rewrite' => array('slug' => 'testimonials'),
+    ));
+}
+add_action('init', 'lessonlms_register_testimonial');
+
+function lessonlms_testimonial_meta_box() {
+    add_meta_box(
+        'testimonial_info',
+        'Student Designation',
+        'lessonlms_testimonial_callback',
+        'testimonial',
+        'normal',
+        'high'
+    );
+}
+add_action('add_meta_boxes', 'lessonlms_testimonial_meta_box');
+
+function lessonlms_testimonial_callback($post) {
+    $designation = get_post_meta( $post->ID, 'testimonial_designation', true);
+    ?>
+    <p>
+        <label><strong>Designation / Course Name:</strong></label><br>
+        <input type="text" name="testimonial_designation" style="width:100%; margin-top:5px;" value="<?php echo esc_attr($designation); ?>" placeholder="e.g. Student  of WordPrss Theme Development">
+    </p>
+    <?php
+}
+
+function lessonlms_save_testimonial_meta($post_id) {
+    if(isset($_POST['testimonial_designation'])) {
+        update_post_meta($post_id, 'testimonial_designation', sanitize_text_field($_POST['testimonial_designation']));
+    }
+}
+add_action('save_post_testimonial', 'lessonlms_save_testimonial_meta');
 
 // ইউজার রিভিউ সাবমিট করলে তা প্রসেস হবে এবং সেভ হবে।
 function lessonlms_handle_review_submission(){
@@ -688,3 +781,157 @@ function lessonlms_get_review_stats($course_id) {
 function lessonlms_get_course_reviews($course_id){
     return get_post_meta($course_id, '_course_reviews', true) ?: array();
 }
+
+function lessonlms_handle_enrollment() {
+    $course_id = isset($_POST['course_id']) ? intval($_POST['course_id']) : 0;
+
+    if ( $course_id <= 0 ){
+        wp_send_json_error('Invalid Course ID');
+    }
+
+    $user_id = get_current_user_id();
+
+    if ( $user_id == 0 ) {
+        wp_send_json_error('Please Login to enroll');
+    }
+
+    $current_enrolled = get_post_meta($course_id, '_enrolled_students', true ?: 0 );
+    $new_count = intval($current_enrolled) + 1;
+    update_post_meta($course_id, '_enrolled_students', $new_count);
+
+
+    $user_enrollments = get_user_meta($user_id, '_user_enrollments', true);
+
+    if ( !is_array($user_enrollments) ) {
+        $user_enrollments = array();
+    }
+
+    $user_enrollments[] = array(
+        'course_id' => $course_id,
+        'date' => current_time('mysql'),
+    );
+
+    update_user_meta($user_id, '_user_enrollments', $user_enrollments);
+
+    $formatted_count = number_format($new_count);
+    wp_send_json_success($formatted_count);
+
+}
+add_action('wp_ajax_lessonlms_enroll_course', 'lessonlms_handle_enrollment');
+add_action('wp_ajax_nopriv_lessonlms_enroll_course', 'lessonlms_handle_enrollment');
+
+function lessonlms_ajax_scripts() {
+    ?>
+    
+    <script type="text/javascript">
+        var ajax_object = {
+            ajaxurl: '<?php echo admin_url('admin-ajax.php'); ?>'
+        }
+    </script>
+
+    <?php
+}
+add_action('wp_head', 'lessonlms_ajax_scripts');
+
+function lessonlms_dashboard_enrollment_widget() {
+    global $wpdb;
+
+    $total_enrollments = $wpdb->get_var(
+        "SELECT SUM(meta_value) FROM $wpdb->postmeta WHERE meta_key = '_enrolled_students'"
+    );
+
+    $recent_enrollments = $wpdb->get_results(
+        "SELECT u.user_login, p.post_title, um.meta_value
+        FROM $wpdb->usermeta um
+        JOIN $wpdb->users u ON u.ID = um.user_id
+        JOIN $wpdb->posts p ON p.ID = um.meta_value
+        WHERE um.meta_key = '_user_enrollments'
+        ORDER BY um.umeta_id DESC
+        LIMIT 5"
+    );
+    ?>
+
+    <div class="enrollment-dashboard-widget">
+        <h3>Enrollment Status</h3>
+
+        <div class="enrollment-stats">
+            <div class="stat-item">
+                <span class="stat-number"><?php echo number_format($total_enrollments ?: 0 ); ?></span>
+                <span class="stat-label">Total Enrollments</span>
+            </div>
+        </div>
+
+        <?php if ( $recent_enrollments ) : ?>
+            <div class="recent-enrollments">
+                <h4>Last Enrollment</h4>
+                <ul>
+                    <?php foreach ( $recent_enrollments as $enrollment ) : ?>
+                        <li>
+                            <strong><?php echo esc_html($enrollment->user_login); ?></strong>
+                            - <?php echo esc_html($enrollment->post_title); ?>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+        <?php endif;?>
+    </div>
+
+
+
+    <?php
+
+}
+
+function lessonlms_add_enrollment_dashboard_widget() {
+    wp_add_dashboard_widget(
+        'enrollment_dashboard_widget',
+        'Course Enrollment Status',
+        'lessonlms_dashboard_enrollment_widget'
+    );
+}
+add_action('wp_dashboard_setup', 'lessonlms_add_enrollment_dashboard_widget');
+
+
+function lessonlms_add_custom_roles() {
+    add_role('student', 'Student', get_role('subscriber')->capabilities);
+    add_role('instructor', 'Instructor', get_role('author')->capabilities);
+}
+add_action('init', 'lessonlms_add_custom_roles');
+
+function lessonlms_login_redirect( $redirect_to, $request, $user ) {
+    if ( isset( $user->roles ) && is_array( $user->roles ) ) {
+        if( in_array( 'administrator', $user->roles )  || in_array( 'instructor', $user->roles ) ){
+            return admin_url();
+        }
+        elseif( in_array( 'student', $user->roles ) ){
+            return home_url('/student-dashboard');
+        }
+    }
+    return $redirect_to;
+}
+add_filter('login_redirect', 'lessonlms_login_redirect', 10, 3);
+
+
+function lessonlms_block_student_admin_access(){
+    if ( is_user_logged_in() && is_admin() && ! defined( 'DOING_AJAX' ) ) {
+        $user = wp_get_current_user();
+
+        if( in_array( 'student', (array) $user->roles ) ){
+            wp_redirect( home_url('/student-dashboard'));
+            exit;
+        }
+    }
+}
+add_action( 'init', 'lessonlms_block_student_admin_access' );
+
+function lessonlms_show_own_courses_only( $query ) {
+    if ( ! is_admin() || $query->is_main_query() ) {
+        return;
+    }
+    $user = wp_get_current_user();
+
+    if( in_array('instructor', (array) $user->roles )){
+        $query->set('author', $user->ID);
+    }
+}
+add_action('pre_get_posts', 'lessonlms_show_own_courses_only');

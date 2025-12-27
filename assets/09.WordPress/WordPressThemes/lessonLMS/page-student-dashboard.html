@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/images/logo.png" alt="Logo">
+                    </a>
+                </div>
+                <div class="menu-button-wrapper">
+                    <nav class="main-menu">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Courses</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </nav>
+                    <div class="button btn-black">
+                        <a href="#">My Dashboard</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="dashboard-area" style="padding: 80px 0; background: #f9f9f9;">
+        <div class="container">
+            
+            <div class="dashboard-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 40px; border-bottom: 2px solid #e5e5e5; padding-bottom: 20px;">
+                <div>
+                    <h1 style="font-size: 32px; color: #171100;">Welcome, Student Name!</h1>
+                    <p style="color: #5F5B53;">Your Learning Dashboard</p>
+                </div>
+                <div>
+                    <a href="#" class="button" style="background: #FF564F; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Logout</a>
+                </div>
+            </div>
+
+            <h2 style="margin-bottom: 30px;">My Enrolled Courses</h2>
+            
+            <div class="courses-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+                
+                <div class="course" style="height: auto; border-radius: 12px; background: #FFF; border: 1px solid #E2DFDA; overflow: hidden;">
+                    <div class="img" style="height: 200px;">
+                        <img src="assets/images/course-1.png" alt="Course Image" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    
+                    <div class="course-details" style="padding: 20px;">
+                        <h3 style="font-size: 18px; margin-bottom: 10px;">Complete Web Design Course</h3>
+                        <p style="font-size: 14px; color: #5F5B53; margin-bottom: 15px;">
+                            Enrolled Date: January 15, 2025
+                        </p>
+                        
+                        <a href="#" style="display: block; text-align: center; background: #FFB900; color: #fff; padding: 10px; border-radius: 5px; font-weight: 600;">
+                            Start Learning
+                        </a>
+                    </div>
+                </div>
+
+                <div class="course" style="height: auto; border-radius: 12px; background: #FFF; border: 1px solid #E2DFDA; overflow: hidden;">
+                    <div class="img" style="height: 200px;">
+                        <img src="assets/images/course-2.png" alt="Course Image" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    
+                    <div class="course-details" style="padding: 20px;">
+                        <h3 style="font-size: 18px; margin-bottom: 10px;">Advanced PHP & MySQL</h3>
+                        <p style="font-size: 14px; color: #5F5B53; margin-bottom: 15px;">
+                            Enrolled Date: February 20, 2025
+                        </p>
+                        
+                        <a href="#" style="display: block; text-align: center; background: #FFB900; color: #fff; padding: 10px; border-radius: 5px; font-weight: 600;">
+                            Start Learning
+                        </a>
+                    </div>
+                </div>
+
+                <div class="course" style="height: auto; border-radius: 12px; background: #FFF; border: 1px solid #E2DFDA; overflow: hidden;">
+                    <div class="img" style="height: 200px;">
+                        <img src="assets/images/course-3.png" alt="Course Image" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    
+                    <div class="course-details" style="padding: 20px;">
+                        <h3 style="font-size: 18px; margin-bottom: 10px;">WordPress Theme Development</h3>
+                        <p style="font-size: 14px; color: #5F5B53; margin-bottom: 15px;">
+                            Enrolled Date: March 05, 2025
+                        </p>
+                        
+                        <a href="#" style="display: block; text-align: center; background: #FFB900; color: #fff; padding: 10px; border-radius: 5px; font-weight: 600;">
+                            Start Learning
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="about-company">
+                    <p>LessonLMS is an education theme for training centers.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

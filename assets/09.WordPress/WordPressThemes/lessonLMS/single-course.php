@@ -11,10 +11,22 @@
     $language = get_post_meta(get_the_ID(), 'language', true) ?: 'English';
     $subtitles = get_post_meta(get_the_ID(), 'subtitles', true) ?: 'English';
 
+    $learn_points_raw = get_post_meta(get_the_ID(), 'learn_points', true);
+    $learn_points = $learn_points_raw ? array_filter(array_map('trim', explode("\n", $learn_points_raw))) : [];
+
+    $requirements_raw = get_post_meta(get_the_ID(), 'requirements', true);
+    $requirements = $requirements_raw ? array_filter(array_map('trim', explode("\n", $requirements_raw))) : [];
+
+    $target_audience_raw = get_post_meta(get_the_ID(), 'target_audience', true);
+    $target_audience = $target_audience_raw ? array_filter(array_map('trim', explode("\n", $target_audience_raw))) : [];
+
     $discount = '';
     if (!empty($original_price) && $original_price > $price ) {
         $discount = round((($original_price - $price)/$original_price) * 100 );
     }
+
+    $enrolled_students = get_post_meta(get_the_ID(), '_enrolled_students', true) ?: 0;
+    $current_user_id = get_current_user_id();
     ?>
 
     <section class="single-course">
@@ -48,7 +60,7 @@
                     </div>
                     <div class="enrolled">
                         <i class="fas fa-users"></i>
-                        <span>3,450 students enrolled</span>
+                        <span><?php echo number_format($enrolled_students); ?> students enrolled</span>
                     </div>
                 </div>
             </div>
@@ -70,8 +82,16 @@
                             <?php if(!empty($discount)) : ?>
                                 <div class="discount-badge"><?php echo esc_html($discount); ?>% OFF</div>
                             <?php endif; ?>
-
-                            <button class="enroll-btn">Enroll Now</button>
+                            
+                            <?php if ($current_user_id > 0) : ?>
+                                <button class="enroll-btn" data-course-id="<?php echo get_the_ID(); ?>">Enroll Now</button>
+                            <?php else : ?>
+                                <div class="login-required">
+                                    <p>Please Register</p>
+                                    <a href="<?php echo wp_login_url(get_permalink()); ?>" class="login-btn">Login</a>
+                                    <a href="<?php echo wp_registration_url(); ?>" class="register-btn">Registration</a>
+                                </div>
+                            <?php endif; ?>
                             <div class="includes">
                                 <h4>This course includes:</h4>
                                 <ul>
@@ -97,24 +117,31 @@
                         <div class="tab-content active" id="overview">
                             <h2>Course Description</h2>
                             <p>Master the art of designing modern web applications with this comprehensive course. You'll learn industry-standard tools and techniques used by professional UI/UX designers to create beautiful, functional web applications.</p>
+                            <?php if (!empty($learn_points)) : ?>
                             
                             <h2>What You'll Learn</h2>
+
                             <ul class="learn-list">
-                                <li><i class="fas fa-check"></i> Principles of effective web app design</li>
-                                <li><i class="fas fa-check"></i> User experience research methods</li>
-                                <li><i class="fas fa-check"></i> Creating wireframes and prototypes</li>
-                                <li><i class="fas fa-check"></i> Design systems and component libraries</li>
-                                <li><i class="fas fa-check"></i> Responsive design techniques</li>
-                                <li><i class="fas fa-check"></i> Interaction design and micro-animations</li>
-                                <li><i class="fas fa-check"></i> Handing off designs to developers</li>
+                                <?php foreach ( $learn_points as $point ) : ?>
+                                    <li>
+                                        <i class="fas fa-check"></i> 
+                                        <?php echo esc_html($point); ?> 
+                                    </li>
+                                <?php endforeach; ?>
                             </ul>
 
+                            <?php endif; ?>
+
+
                             <h2>Requirements</h2>
+
+                            <?php if (!empty($requirements)) : ?>
                             <ul class="requirements-list">
-                                <li><i class="fas fa-circle"></i> Basic computer skills</li>
-                                <li><i class="fas fa-circle"></i> Familiarity with any design tool (optional)</li>
-                                <li><i class="fas fa-circle"></i> Passion for design and creativity</li>
+                                <?php foreach($requirements as $requirement ) : ?>
+                                <li><i class="fas fa-circle"></i> <?php echo esc_html($requirement); ?></li>
+                                <?php endforeach;?>
                             </ul>
+                            <?php endif; ?>
                         </div>
 
                         <div class="tab-content" id="curriculum">
@@ -150,10 +177,19 @@
 
                         <div class="tab-content" id="instructor">
                             <div class="instructor-profile">
-                                <img src="assets/images/instructor.jpg" alt="Instructor">
+                                <?php 
+                                $instructor_id = get_the_author_meta('ID');
+                                $instructor_name = get_the_author_meta('display_name');
+                                $instructor_bio = get_the_author_meta('description');
+                                ?>
+
+                                <?php echo get_avatar($instructor_id, 96, '', $instructor_name, array( 'alt' => $instructor_name)); ?>
                                 <div class="instructor-info">
-                                    <h3>Sarah Johnson</h3>
-                                    <span class="title">Senior UI/UX Designer at TechCorp</span>
+                                    <h3><?php echo esc_html($instructor_name); ?></h3>
+                                    <?php if ( !empty($instructor_bio) ) : ?>
+                                        <span class="title"><?php echo wp_kses_post( $instructor_bio ); ?></span>
+                                    <?php endif; ?>
+                                    
                                     <div class="rating">
                                         <div class="stars">
                                             <i class="fas fa-star"></i>
@@ -166,15 +202,15 @@
                                     </div>
                                     <div class="stats">
                                         <div class="stat">
-                                            <span class="number">12,540</span>
+                                            <span class="number"><?php echo number_format($enrolled_students); ?></span>
                                             <span class="label">Students</span>
                                         </div>
                                         <div class="stat">
-                                            <span class="number">8</span>
+                                            <span class="number"><?php echo count_user_posts($instructor_id, 'course'); ?></span>
                                             <span class="label">Courses</span>
                                         </div>
                                     </div>
-                                    <p>Sarah has been designing digital products for over 10 years, specializing in web and mobile applications. She has worked with startups and Fortune 500 companies to create intuitive, beautiful user experiences.</p>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -293,12 +329,13 @@
 
                     <div class="sidebar-card">
                         <h3>Who this course is for:</h3>
+                        <?php if (!empty($target_audience)) : ?>
                         <ul class="audience-list">
-                            <li><i class="fas fa-check"></i> Aspiring UI/UX designers</li>
-                            <li><i class="fas fa-check"></i> Web developers wanting design skills</li>
-                            <li><i class="fas fa-check"></i> Graphic designers transitioning to digital</li>
-                            <li><i class="fas fa-check"></i> Product managers</li>
+                            <?php foreach ( $target_audience as $audience ) : ?>
+                            <li><i class="fas fa-check"></i> <?php echo esc_html($audience); ?></li>
+                            <?php endforeach; ?>
                         </ul>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -356,6 +393,44 @@
                 } else {
                     accordionContent.style.maxHeight = null;
                 }
+            });
+        });
+
+        // Enroll Button click Handler
+        document.querySelectorAll('.enroll-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const courseId = this.getAttribute('data-course-id');
+                const enrolledElement = document.querySelector('.enrolled span');
+
+                fetch(ajax_object.ajaxurl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: 'action=lessonlms_enroll_course&course_id=' + courseId
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success){
+                        enrolledElement.textContent = data.data + 'student enrolled';
+
+                        this.textContent = 'Enrolled';
+                        this.disabled = true;
+
+                        alert('Enrolled Successfully');
+                    }else{
+                        if (data.data === 'Please Login to enroll'){
+                            alert('Please Login first');
+                            window.location.href = '<?php echo wp_login_url(get_permalink()); ?>';
+                        }else{
+                            alert('opps! Enrollment Unsuccessfull.' + data.data);
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Please try again');
+                });
             });
         });
     </script>

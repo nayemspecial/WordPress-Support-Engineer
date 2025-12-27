@@ -1065,9 +1065,9 @@ nav.main-menu-phone ul {
 
 /*----- testimonial section -----*/
 section.testimonial {
-    height: 380px;
+    height: 480px;
     background-color: #2E2100;
-    padding-top: 97px;
+    padding-top: 100px;
 }
 
 .testimonial-wrapper {
