@@ -49,7 +49,7 @@ All lessons are supported with:
 -  [YouTube Playlist](https://www.youtube.com/watch?v=ykp8A_xiIdg&list=PLXu0yH5shlwHhlqfw9JuHgRVniAfnoarw)  
 
 
-### 6. WordPress Theme Development (Ongoing)
+### 6. WordPress Theme Development 
 -  [Course Outline](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/09.WordPress/wordpress-theme-development.md)  
 -  [YouTube Playlist](https://youtube.com/playlist?list=PLXu0yH5shlwGPtdkiVpiUKlxUFa9P5sOZ)  
 
