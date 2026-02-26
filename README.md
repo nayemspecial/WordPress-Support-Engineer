@@ -15,67 +15,58 @@ This repository is designed for students and beginners who want to build a stron
 - WordPress Theme & Widget Development
 
 All lessons are supported with:
-✅ Course outlines  
-✅ Practical examples  
-✅ YouTube video tutorials  
+- Course outlines  
+- Practical examples  
+- YouTube video tutorials  
 
----
 
-## 📚 Web Development
+##  Web Design
+
+### 1. HTML (Completed)
+-  [Course Outline](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/01.HTML/html-course-outline.md)  
+-  [YouTube Playlist](https://youtube.com/playlist?list=PLXu0yH5shlwEP7vs20y1Q54MNBJHR--Et)  
+
+
+### 2. CSS
+-  [Course Outline](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/02.CSS/css-course-outline.md)  
+-  [YouTube Playlist](https://youtube.com/playlist?list=PLXu0yH5shlwEcRcSVL0zpuAy4L7eeHFix)  
+
+
+### 3. Tailwind CSS (One Project Completed)
+-  [Course Outline](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/05.TailwindCSS/course-module.md)  
+-  [YouTube Playlist](https://youtube.com/playlist?list=PLXu0yH5shlwGyBLe7dXp27UEAo-k1NzgJ)  
+
+
+##  Web Development
 
 ### 4. PHP
-- 📘 [Course Outline](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/07.PHP/module2.md)  
-- 🎥 [YouTube Playlist](https://youtube.com/playlist?list=PLXu0yH5shlwFCc5REj64Z5inFF3xmoSLy)  
+-  [Course Outline](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/07.PHP/module2.md)  
+-  [YouTube Playlist](https://youtube.com/playlist?list=PLXu0yH5shlwFCc5REj64Z5inFF3xmoSLy)  
 
----
 
 ### 5. MySQL
-- 📘 [Course Outline](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/08.MySQL/mysql-course-module.md)  
-- 🎥 [YouTube Playlist](https://www.youtube.com/watch?v=ykp8A_xiIdg&list=PLXu0yH5shlwHhlqfw9JuHgRVniAfnoarw)  
+-  [Course Outline](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/08.MySQL/mysql-course-module.md)  
+-  [YouTube Playlist](https://www.youtube.com/watch?v=ykp8A_xiIdg&list=PLXu0yH5shlwHhlqfw9JuHgRVniAfnoarw)  
 
----
 
 ### 6. WordPress Theme Development (Ongoing)
-- 📘 [Course Outline](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/09.WordPress/wordpress-theme-development.md)  
-- 🎥 [YouTube Playlist](https://youtube.com/playlist?list=PLXu0yH5shlwGPtdkiVpiUKlxUFa9P5sOZ)  
+-  [Course Outline](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/09.WordPress/wordpress-theme-development.md)  
+-  [YouTube Playlist](https://youtube.com/playlist?list=PLXu0yH5shlwGPtdkiVpiUKlxUFa9P5sOZ)  
 
----
 
 ### WordPress Widget Development (Ongoing)
 Widget development lessons are being added gradually as part of the WordPress series.
 
----
 
-## 🎨 Web Design
-
-### 1. HTML (Completed)
-- 📘 [Course Outline](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/01.HTML/html-course-outline.md)  
-- 🎥 [YouTube Playlist](https://youtube.com/playlist?list=PLXu0yH5shlwEP7vs20y1Q54MNBJHR--Et)  
-
----
-
-### 2. CSS
-- 📘 [Course Outline](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/02.CSS/css-course-outline.md)  
-- 🎥 [YouTube Playlist](https://youtube.com/playlist?list=PLXu0yH5shlwEcRcSVL0zpuAy4L7eeHFix)  
-
----
-
-### 3. Tailwind CSS (One Project Completed)
-- 📘 [Course Outline](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/05.TailwindCSS/course-module.md)  
-- 🎥 [YouTube Playlist](https://youtube.com/playlist?list=PLXu0yH5shlwGyBLe7dXp27UEAo-k1NzgJ)  
-
----
-
-## 🎯 Who Is This For?
+##  Who Is This For?
 
 - Beginners in web development  
 - Students who want to learn WordPress professionally  
 - Freelancers who want to work as WordPress Support Engineers  
 - Anyone who wants structured learning with real examples  
 
----
 
-## 🛠 What You Will Learn
+##  What You Will Learn
 
 - HTML & CSS for website structure and design  
 - Tailwind CSS for modern UI development  
@@ -85,18 +76,16 @@ Widget development lessons are being added gradually as part of the WordPress se
 - WordPress widget development  
 - Real-world project practices  
 
----
 
-## 🌐 Learning Resources
+##  Learning Resources
 
-- 📘 GitHub Repository: Course outlines & materials  
-- 🎥 YouTube Playlists: Step-by-step video tutorials  
-- 🧪 Practice-based approach  
-- 📂 Organized modules  
+-  GitHub Repository: Course outlines & materials  
+-  YouTube Playlists: Step-by-step video tutorials  
+-  Practice-based approach  
+-  Organized modules  
 
----
 
-## 🤝 Contribution
+##  Contribution
 
 Contributions are welcome!  
 If you find any issues or want to improve content:
@@ -104,20 +93,18 @@ If you find any issues or want to improve content:
 - Create a new branch  
 - Submit a Pull Request  
 
----
 
-## 📌 Author
+##  Author
 
 **Md. Nayemur Rahman**  
 WordPress & Web Development Instructor  
 
----
 
-## ⭐ Support
+##  Support
 
 If you find this repository helpful:
 - Star ⭐ the repository  
 - Share it with others  
 - Subscribe to the YouTube channel  
 
-Let’s build skills and grow together 🚀
+Let’s build skills and grow together 
