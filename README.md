@@ -20,38 +20,13 @@ All lessons are supported with:
 - YouTube video tutorials  
 
 
-##  Web Design
+## 📚 Learning Roadmap
 
-### 1. HTML (Completed)
--  [Course Outline](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/01.HTML/html-course-outline.md)  
--  [YouTube Playlist](https://youtube.com/playlist?list=PLXu0yH5shlwEP7vs20y1Q54MNBJHR--Et)  
-
-
-### 2. CSS
--  [Course Outline](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/02.CSS/css-course-outline.md)  
--  [YouTube Playlist](https://youtube.com/playlist?list=PLXu0yH5shlwEcRcSVL0zpuAy4L7eeHFix)  
-
-
-### 3. Tailwind CSS (One Project Completed)
--  [Course Outline](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/05.TailwindCSS/course-module.md)  
--  [YouTube Playlist](https://youtube.com/playlist?list=PLXu0yH5shlwGyBLe7dXp27UEAo-k1NzgJ)  
-
-
-##  Web Development
-
-### 4. PHP
--  [Course Outline](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/07.PHP/module2.md)  
--  [YouTube Playlist](https://youtube.com/playlist?list=PLXu0yH5shlwFCc5REj64Z5inFF3xmoSLy)  
-
-
-### 5. MySQL
--  [Course Outline](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/08.MySQL/mysql-course-module.md)  
--  [YouTube Playlist](https://www.youtube.com/watch?v=ykp8A_xiIdg&list=PLXu0yH5shlwHhlqfw9JuHgRVniAfnoarw)  
-
-
-### 6. WordPress Theme Development 
--  [Course Outline](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/09.WordPress/wordpress-theme-development.md)  
--  [YouTube Playlist](https://youtube.com/playlist?list=PLXu0yH5shlwGPtdkiVpiUKlxUFa9P5sOZ)  
+| Web Design | Web Development |
+| --- | --- |
+| 1. HTML (Completed)<br><br>📄 [Course Outline](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/01.HTML/html-course-outline.md)<br>▶️ [YouTube Playlist](https://youtube.com/playlist?list=PLXu0yH5shlwEP7vs20y1Q54MNBJHR--Et) | 4. PHP<br><br>📄 [Course Outline](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/07.PHP/module2.md)<br>▶️ [YouTube Playlist](https://youtube.com/playlist?list=PLXu0yH5shlwFCc5REj64Z5inFF3xmoSLy) |
+| 2. CSS<br><br>📄 [Course Outline](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/02.CSS/css-course-outline.md)<br>▶️ [YouTube Playlist](https://youtube.com/playlist?list=PLXu0yH5shlwEcRcSVL0zpuAy4L7eeHFix) | 5. MySQL<br><br>📄 [Course Outline](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/08.MySQL/mysql-course-module.md)<br>▶️ [YouTube Playlist](https://www.youtube.com/watch?v=ykp8A_xiIdg&list=PLXu0yH5shlwHhlqfw9JuHgRVniAfnoarw) |
+| 3. Tailwind CSS (One Project Completed)<br><br>📄 [Course Outline](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/05.TailwindCSS/course-module.md)<br>▶️ [YouTube Playlist](https://youtube.com/playlist?list=PLXu0yH5shlwGyBLe7dXp27UEAo-k1NzgJ) | 6. WordPress Theme Development<br><br>📄 [Course Outline](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/09.WordPress/wordpress-theme-development.md)<br>▶️ [YouTube Playlist](https://youtube.com/playlist?list=PLXu0yH5shlwGPtdkiVpiUKlxUFa9P5sOZ) | 
 
 
 ### WordPress Widget Development (Ongoing)
