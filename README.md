@@ -29,10 +29,6 @@ All lessons are supported with:
 | 3. Tailwind CSS (One Project Completed)<br><br>📄 [Course Outline](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/05.TailwindCSS/course-module.md)<br>▶️ [YouTube Playlist](https://youtube.com/playlist?list=PLXu0yH5shlwGyBLe7dXp27UEAo-k1NzgJ) | 6. WordPress Theme Development<br><br>📄 [Course Outline](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/09.WordPress/wordpress-theme-development.md)<br>▶️ [YouTube Playlist](https://youtube.com/playlist?list=PLXu0yH5shlwGPtdkiVpiUKlxUFa9P5sOZ) | 
 
 
-### WordPress Widget Development (Ongoing)
-Widget development lessons are being added gradually as part of the WordPress series.
-
-
 ##  Who Is This For?
 
 - Beginners in web development  
@@ -72,7 +68,7 @@ If you find any issues or want to improve content:
 ##  Author
 
 **Md. Nayemur Rahman**  
-WordPress & Web Development Instructor  
+Web Developer & Instructor  
 
 
 ##  Support
