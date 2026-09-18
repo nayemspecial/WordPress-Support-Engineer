@@ -1,0 +1,657 @@
+/*-----  Large Tablets & Small Laptops -----*/
+@media (max-width: 1220px){
+    header{
+        padding: 0 5%;
+    }
+    section{
+        padding: 0 5% !important;
+    }
+
+    /*----- hero section -----*/
+    section.hero {
+        padding-top: 48px !important;
+        padding-bottom: 59px !important;
+    }
+    .hero-img-box {
+        width: 40%;
+    }
+    .hero-img-box img {
+        width: 100%;
+    }
+    .card-box {
+        width: 242px;
+        height: 225px;
+        right: -72px;
+        align-items: center;
+        justify-content: center;
+    }
+    .card-items .text p{
+        font-size: 16px;
+    }
+    .hero-text-box{
+        max-width: 45%;
+    }
+    .hero-text-box h1{
+        font-size: 48px;
+        line-height: 110%;
+    }
+    .hero-text-box p{
+        font-size: 16px;
+    }
+    .See-Courses-btn{
+        height: 50px;
+    }
+    .hero-btns{
+        margin-bottom: 30px;
+    }
+    .engagement span {
+        font-size: 16px;
+    }
+    .engagement-wrapper h3{
+        font-size: 40px;
+    }
+    .engagement-wrapper span{
+        font-size: 16px;
+    }
+
+    /*----- courses section -----*/
+    .courses{
+        padding-top: 100px !important;
+        padding-bottom: 100px !important;
+    }
+    .course{
+        height: auto;
+    }
+
+    /*----- testimonial section -----*/
+    section.testimonial {
+        padding-top: 97px !important;
+    }
+    .testimonial-wrapper{
+        gap: 50px;
+    }
+    .reviews{
+        max-width: 600px;
+    }
+    .reviews p{
+        font-size: 22px;
+        line-height: 180%;
+    }
+
+    /*----- features section -----*/
+    section.features {
+        padding-top: 120px !important;
+        padding-bottom: 120px !important;
+    }
+    .features-wrapper{
+        gap: 80px;
+        align-items: center;
+    }
+
+    .features-img{
+        width: 50%;
+    }
+    .features-img img {
+        width: 48%;
+        height: 340px;
+    }
+    .features-text {
+        width: 50%;
+        padding-top: 0;
+    }
+    .features-text h3, .cta-text h3{
+        font-size: 32px;
+    }
+
+    /*----- cta section -----*/
+    section.cta{
+        padding-bottom: 120px !important;
+    }
+    .cta-wrapper{
+        gap: 80px;
+    }
+    .cta-text {
+        width: 60%;
+    }
+
+    .cta-img {
+        width: 40%;
+    }
+
+
+    /*----- blog section -----*/
+    section.blog{
+        padding-top: 96px !important;
+        padding-bottom: 96px !important;
+    }
+    .sngle-blog{
+        height: auto;
+    }
+    .sngle-blog .img{
+        height: 200px;
+    }
+    
+    /*----- footer section -----*/
+    footer{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .footer-wrapper{
+        gap: 40px;
+    }
+    .about-company {
+        width: 35%;
+    }
+    
+    .company {
+        width: 17%;
+        margin-left: 0;
+    }
+    .support{
+        width: 18%;
+    }
+    .address {
+        width: 30%;
+    }
+
+}    
+
+/*----- Tablets & Medium Devices -----*/
+@media (max-width: 991.98px){
+    .menu-button-wrapper{
+        gap: 30px;
+    }
+    .main-menu ul{
+        gap: 25px;
+    }
+    .menu-button-wrapper .button a{
+        height: 40px;
+    }
+
+    /*----- hero section -----*/
+    .card-box {
+        width: 210px;
+        height: 200px;
+        right: -67px;
+    }
+    .card-items svg {
+        width: 32px;
+        height: 32px;
+    }
+    .card-items .text span{
+        font-size: 12px;
+    }
+    .card-items .text p{
+        font-size: 14px;
+    }
+    .hero-text-box h1{
+        font-size: 34px;
+    }
+    .hero-text-box p{
+        line-height: 150%;
+        margin-bottom: 25px;
+    }
+    .hero-btns{
+        gap: 15px;
+    }
+    .See-Courses-btn{
+        font-size: 14px;
+        width: 150px;
+    }
+    .play-btn{
+        width: 35px;
+        height: 35px;
+    }
+    .watch-video-btn{
+        gap: 10px;
+    }
+    .watch-video-btn span{
+        font-size: 14px;
+    }
+    .engagement-wrapper h3{
+        font-size: 32px;
+    }
+    .engagement-wrapper h3 span{
+        font-size: 14px;
+    }
+
+    /*----- courses section -----*/
+    .courses-heading h2{
+        font-size: 28px;
+    }
+    .courses-heading p{
+        font-size: 16px;
+    }
+    .course .img{
+        height: 175px;
+    }
+    .course-details{
+        padding: 20px 15px;
+    }
+    .flex .c-title{
+        font-size: 15px;
+    }
+    .rating{
+        gap: 2px;
+    }
+    .rating svg{
+        width: 14px;
+        height: 14px;
+    }
+    .rating span{
+        font-size: 14px;
+    }
+    .course-details p{
+        line-height: 165%;
+    }
+    .price-btn .price{
+        font-size: 16px;
+    }
+    .price-btn .book-now{
+        width: 60%;
+        height: 40px;
+    }
+
+     /*----- testimonial section -----*/
+     section.testimonial{
+        height: auto;
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+     }
+    .reviews{
+        max-width: 485px;
+    }
+    .reviews p{
+        font-size: 16px;
+    }
+    .student-details img {
+        width: 60px;
+        height: 60px;
+    }
+    .name {
+        margin-top: 10px;
+    }
+    .name h3{
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+
+    /*----- features section -----*/
+    .features-img img {
+        height: 280px;
+    }
+    .features-wrapper{
+        gap: 50px;
+    }
+    .features-img{
+        gap: 20px;
+    }
+    .features-text h3, .cta-text h3 {
+        font-size: 28px;
+    }
+
+    /*----- cta section -----*/
+    .cta-wrapper{
+        align-items: center;
+    }
+    .cta-text{
+        padding-top: 0;
+    }
+    .cta-img{
+        height: 350px;
+    }
+
+    /*----- blog section -----*/
+    .blog-heading h3{
+        font-size: 28px;
+    }
+    .blog-heading p {
+        font-size: 16px;
+    }
+    .single-blog-details {
+        padding: 20px;
+    }
+    .date span{
+        font-size: 12px;
+    }
+    .single-blog-details .read-more{
+        height: 40px;
+        font-size: 12px;
+    }
+    .sngle-blog .img{
+        height: 170px;
+    }
+    .sngle-blog .img img {
+        object-fit: cover;
+    }
+    .blog-title span {
+        font-size: 14px;
+    }
+
+
+    /*----- footer -----*/
+    .footer-wrapper{
+        flex-wrap: wrap;
+        row-gap: 60px;
+    }
+
+    .about-company {
+        width: 100%;
+    }
+    .company {
+        width: 20%;
+    }
+    .support {
+        width: 25%;
+    }
+
+    .address {
+        width: 40%;
+    }
+    
+}
+
+/*----- Mobile Phones (Landscape & Portrait) -----*/
+@media (max-width: 767.98px){
+    #navPhone{
+        display: block;
+    }
+    nav.main-menu {
+        display: none;
+    }
+
+    .menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /*----- hero section -----*/
+    .hero-wrapper{
+        flex-direction: column-reverse;
+        gap: 50px;
+        align-items: flex-start;
+    }
+    .hero-text-box {
+        max-width: 90%;
+    }
+    .hero-text-box h1{
+        font-size: 40px;
+    }
+    .hero-btns {
+        gap: 24px;
+    }
+    .engagement-wrapper h3 {
+        font-size: 44px;
+    }
+    .hero-img-box {
+        width: 60%;
+        margin: 0 auto;
+    }
+    .hero-img-box img {
+        height: 400px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+    .card-box{
+        width: 230px;
+        right: -100px;
+        bottom: 50%;
+        transform: translateY(50%);
+    }
+
+    /*----- courses section -----*/
+    .courses-heading p{
+        max-width: 70%;
+    }
+    .course-details{
+        padding: 20px;
+    }
+    .courses-wrapper .left-arrow,
+    .courses-wrapper .right-arrow{
+        top: -100px;
+    }
+
+    /*----- testimonial section -----*/
+    .student-details {
+        width: 44%;
+    }
+    .name span{
+        font-size: 12px;
+    }
+    .reviews p{
+        font-size: 14px;
+    }
+
+    /*----- features section -----*/
+    .features-wrapper {
+        flex-direction: column;
+    }
+    .features-img {
+        width: 80%;
+    }
+    .features-text {
+        width: 80%;
+    }
+    .features-text p, .cta-text p{
+        font-size: 14px;
+    }
+    .features-text span{
+        font-size: 14px;
+    }
+
+
+    /*----- cta section -----*/
+    .cta-wrapper {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+    .cta-img,
+    .cta-text {
+        width: 80%;
+    }
+    .cta-img img {
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    /*----- blog section -----*/
+    .single-blog-details {
+        padding: 25px;
+    }
+
+
+    /*----- footer -----*/
+    .footer-wrapper{
+        column-gap: 20px
+    }
+    .footer-nav hr {
+        width: 100px;
+    }
+    .company {
+        width: 20%;
+    }
+    .support {
+        width: 30%;
+    }
+    .address {
+        width: 40%;
+    }
+}
+
+/*----- mobile phone -----*/
+@media (max-width: 575px){
+    header{
+        top: -4px;
+    }
+    .header-wrapper{
+        padding: 25px 0 16px 0;
+    }
+    .menu-button-wrapper .button {
+        display: none;
+    }
+
+    /*----- hero section -----*/
+    .hero-wrapper{
+        align-items: center;
+    }
+    .hero-text-box {
+        max-width: 95%;
+    }
+    .hero-text-box h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+    .hero-text-box p {
+        text-align: center;
+        font-size: 14px;
+    }
+    .hero-btns {
+        justify-content: center;
+        gap: 20px;
+    }
+    .watch-video-btn,
+    .See-Courses-btn {
+        width: 50%;
+    }
+    .engagement span{
+        margin-bottom: 2px;
+    }
+    .hero-img-box {
+        width: 90%;
+    }
+    .card-box {
+        width: 210px;
+        height: 180px;
+        right: 50%;
+        bottom: 8%;
+        transform: translate(50%, 0%);
+        gap: 6px;
+    }
+
+    /*----- courses section -----*/
+    .courses {
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+    }
+    .courses-heading h2{
+        font-size: 24px;
+    }
+    .courses-heading p {
+        font-size: 14px;
+    }
+    .course .img {
+        height: 240px;
+    }
+    .course-details {
+        padding: 25px;
+    }
+    .courses-wrapper .left-arrow,
+    .courses-wrapper .right-arrow{
+        width: 32px;
+        height: 32px;
+    }
+    .courses-wrapper .left-arrow{
+        right: 45px;
+    }
+
+
+    /*----- testimonial section -----*/
+    
+    .testimonial-wrapper{
+        flex-direction: column-reverse;
+    }
+    .reviews{
+        padding: 0 3%;
+    }
+     .absolute-svg{
+        left: 0;
+        top: 12px;
+     }
+    .absolute-svg svg {
+        width: 20px;
+    }
+    .reviews p{
+        text-align: center;
+    }
+    .student-details {
+        width: 100%;
+        text-align: center;
+    }
+    .slick-slide img {
+        margin: 0 auto;
+    }
+    .testimonial-items .slick-dots {
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /*----- features section -----*/
+    section.features {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+
+     .features-text h3, .cta-text h3{
+        font-size: 24px;
+    }
+
+    .features-img,
+    .features-text {
+        width: 100%;
+    }
+    .features-img img {
+        height: 220px;
+    }
+    .features-text .sign-up, .cta-text .join-now{
+        height: 40px;
+    }
+
+    /*----- cta section -----*/
+    .cta-img {
+        height: 300px;
+    }
+    .cta-img,
+    .cta-text {
+        width: 100%;
+    }
+
+    /*----- blog section -----*/
+    section.blog {
+        padding-top: 60px !important;
+        padding-bottom: 70px !important;
+    }
+    .blog-heading h3{
+        font-size: 24px;
+     }
+    .blog-heading p {
+        width: 100%;
+        font-size: 14px;
+    }
+    .sngle-blog .img {
+        height: 150px;
+    }
+    .single-blog-details {
+        padding: 15px;
+    }
+    .blog-title span {
+        font-size: 12px;
+    }
+    .single-blog-details .date, 
+    .single-blog-details hr {
+        margin-bottom: 6px;
+    }
+    
+
+    /*----- footer -----*/
+    .company {
+        width: 40%;
+    }
+    .support {
+        width: 40%;
+    }
+    .address {
+        width: 100%;
+    }
+}
