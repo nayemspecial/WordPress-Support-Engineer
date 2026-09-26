@@ -1,4 +1,4 @@
-## ওয়ার্ডপ্রেসস সাপোর্ট ইঞ্জিনিয়ার কোর্স - HTML
+## ওয়ার্ডপ্রেস সাপোর্ট ইঞ্জিনিয়ার কোর্স - HTML
 [![HTML](https://img.shields.io/badge/-HTML-orange?style=flat-square)](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/01.HTML/html-course-outline.md)
 [![CSS](https://img.shields.io/badge/-CSS-blue?style=flat-square)](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/02.CSS/css-course-outline.md)
 [![JavaScript](https://img.shields.io/badge/-JavaScript-yellow?style=flat-square)](https://github.com/nayemspecial/wordpress-support-engineer/blob/main/assets/03.JavaScript/course-module.md)
